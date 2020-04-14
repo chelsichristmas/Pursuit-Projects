@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tap Gesture Controller-->
+        <scene sceneID="OTB-hb-y9P">
+            <objects>
+                <viewController storyboardIdentifier="TapGestureController" id="G6i-bD-NgM" customClass="TapGestureController" customModule="UIKit_Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WPi-Am-o7b">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Xsy-Ct-4c6">
+                                <rect key="frame" x="103.5" y="346" width="207" height="204.5"/>
+                                <color key="tintColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Xsy-Ct-4c6" secondAttribute="height" multiplier="1:1" id="juY-cL-FiV"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Xsy-Ct-4c6" firstAttribute="centerX" secondItem="WPi-Am-o7b" secondAttribute="centerX" id="NbV-Sd-0z6"/>
+                            <constraint firstItem="Xsy-Ct-4c6" firstAttribute="width" secondItem="WPi-Am-o7b" secondAttribute="width" multiplier="0.5" id="hVD-Ze-vWz"/>
+                            <constraint firstItem="Xsy-Ct-4c6" firstAttribute="centerY" secondItem="WPi-Am-o7b" secondAttribute="centerY" id="mpq-a3-wdc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kgc-tm-t9J"/>
+                    </view>
+                    <connections>
+                        <outlet property="heartImageView" destination="Xsy-Ct-4c6" id="qtc-e9-tqv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FH3-wV-x0z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="175" y="94"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="64" height="54"/>
+    </resources>
+</document>

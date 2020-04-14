@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="2mf-Oi-4qJ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Media Feed-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MediaFeedViewController" customModule="AVFoundation_MediaFeed" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HBS-Xa-E8O">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="wGn-qR-JPG">
+                                    <size key="itemSize" width="205" height="143"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="mediaCell" id="Xyo-yK-zfc" customClass="MediaCell" customModule="AVFoundation_MediaFeed" customModuleProvider="target">
+                                        <rect key="frame" x="37" y="50" width="340" height="340"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="eyQ-9e-mwX">
+                                            <rect key="frame" x="0.0" y="0.0" width="340" height="340"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="video" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8US-2G-A0o">
+                                                    <rect key="frame" x="20" y="22" width="300" height="296"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="8US-2G-A0o" firstAttribute="top" secondItem="eyQ-9e-mwX" secondAttribute="top" constant="20" symbolic="YES" id="GFC-Tz-zlA"/>
+                                                <constraint firstAttribute="trailing" secondItem="8US-2G-A0o" secondAttribute="trailing" constant="20" symbolic="YES" id="H6u-6x-sff"/>
+                                                <constraint firstAttribute="bottom" secondItem="8US-2G-A0o" secondAttribute="bottom" constant="20" symbolic="YES" id="Xrt-0f-Sbg"/>
+                                                <constraint firstItem="8US-2G-A0o" firstAttribute="leading" secondItem="eyQ-9e-mwX" secondAttribute="leading" constant="20" symbolic="YES" id="pjU-Jo-wqM"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="340" height="340"/>
+                                        <connections>
+                                            <outlet property="mediaImageView" destination="8US-2G-A0o" id="j76-qI-eDt"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="headerView" id="KkG-hG-qed" customClass="HeaderView" customModule="AVFoundation_MediaFeed" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Media Feed" id="S7W-xB-ZAm">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="photo.fill" catalog="system" id="6c3-P5-p2M">
+                                <connections>
+                                    <action selector="photoLibraryButtonPressed:" destination="BYZ-38-t0r" id="ifK-jw-GRq"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Item" image="video.fill" catalog="system" id="uC0-rv-jwb">
+                                <connections>
+                                    <action selector="videoButtonPressed:" destination="BYZ-38-t0r" id="Kea-Z1-2iM"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="HBS-Xa-E8O" id="jzu-dM-Sqp"/>
+                        <outlet property="photoLibraryButton" destination="6c3-P5-p2M" id="IRK-1A-Gn3"/>
+                        <outlet property="videoButton" destination="uC0-rv-jwb" id="lwC-ns-FIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="852.17391304347836" y="117.85714285714285"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hoy-9W-Ve7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2mf-Oi-4qJ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6hP-Tj-Ywi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zg2-GI-ilC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w99-1Q-dS0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-57.971014492753625" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo.fill" catalog="system" width="64" height="46"/>
+        <image name="video" catalog="system" width="64" height="40"/>
+        <image name="video.fill" catalog="system" width="64" height="40"/>
+    </resources>
+</document>

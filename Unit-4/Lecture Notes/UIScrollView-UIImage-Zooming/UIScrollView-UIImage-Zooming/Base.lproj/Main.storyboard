@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIScrollView_UIImage_Zooming" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TIO-4p-IGm">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caO-ZZ-rci" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="810"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nyc-subway-map" translatesAutoresizingMaskIntoConstraints="NO" id="Ylv-Dj-ZOC">
+                                                <rect key="frame" x="-22" y="-45" width="407" height="872"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Ylv-Dj-ZOC" firstAttribute="height" secondItem="caO-ZZ-rci" secondAttribute="height" multiplier="1.07654" id="331-sc-Enr"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ylv-Dj-ZOC" secondAttribute="bottom" constant="-17" id="3AE-f2-gQp"/>
+                                            <constraint firstItem="Ylv-Dj-ZOC" firstAttribute="top" secondItem="caO-ZZ-rci" secondAttribute="top" constant="-45" id="nvR-kQ-H4F"/>
+                                            <constraint firstItem="Ylv-Dj-ZOC" firstAttribute="leading" secondItem="caO-ZZ-rci" secondAttribute="leading" constant="-22" id="yNh-gU-KMi"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ylv-Dj-ZOC" secondAttribute="trailing" constant="-11" id="z6x-DD-QnB"/>
+                                            <constraint firstItem="Ylv-Dj-ZOC" firstAttribute="width" secondItem="caO-ZZ-rci" secondAttribute="width" multiplier="1.08824" id="zXO-26-Gmc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="caO-ZZ-rci" secondAttribute="trailing" id="0dc-ah-47T"/>
+                                    <constraint firstItem="caO-ZZ-rci" firstAttribute="width" secondItem="TIO-4p-IGm" secondAttribute="width" id="ACu-F4-Jb5"/>
+                                    <constraint firstItem="caO-ZZ-rci" firstAttribute="height" secondItem="TIO-4p-IGm" secondAttribute="height" multiplier="0.99022" id="CPA-hJ-LbA"/>
+                                    <constraint firstItem="caO-ZZ-rci" firstAttribute="leading" secondItem="TIO-4p-IGm" secondAttribute="leading" id="HOp-LZ-dum"/>
+                                    <constraint firstAttribute="bottom" secondItem="caO-ZZ-rci" secondAttribute="bottom" constant="8" id="bTa-aW-opg"/>
+                                    <constraint firstItem="caO-ZZ-rci" firstAttribute="top" secondItem="TIO-4p-IGm" secondAttribute="top" id="wtg-RS-Uc3"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="g6d-cT-bqL"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="oWw-df-S9M"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="TIO-4p-IGm" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="3Ay-RJ-BFo"/>
+                            <constraint firstItem="TIO-4p-IGm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZPU-1H-6gb"/>
+                            <constraint firstItem="TIO-4p-IGm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ekf-v5-kNq"/>
+                            <constraint firstItem="TIO-4p-IGm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zXq-RT-PK3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="scrollView" destination="TIO-4p-IGm" id="3Qi-mI-75r"/>
+                        <outlet property="subwayMap" destination="Ylv-Dj-ZOC" id="LSE-jD-UDL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="117.85714285714285"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="nyc-subway-map" width="2700" height="3314"/>
+    </resources>
+</document>

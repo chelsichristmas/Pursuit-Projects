@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Property Animator Controller-->
+        <scene sceneID="eUm-Xv-tGU">
+            <objects>
+                <viewController storyboardIdentifier="PropertyAnimatorController" id="Vv2-aA-NGf" customClass="PropertyAnimatorController" customModule="UIKit_Animations" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6sH-e7-Kwm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="duck" translatesAutoresizingMaskIntoConstraints="NO" id="GSA-Yc-XAu">
+                                <rect key="frame" x="87" y="328" width="240" height="240"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GSA-Yc-XAu" secondAttribute="height" multiplier="1:1" id="gkB-4O-N31"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KPr-5k-Mko">
+                                <rect key="frame" x="18" y="603" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderDidChange:" destination="Vv2-aA-NGf" eventType="valueChanged" id="Jec-Ug-bLA"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KPr-5k-Mko" firstAttribute="leading" secondItem="VA7-vU-sFM" secondAttribute="leading" constant="20" id="Gi0-VE-UJX"/>
+                            <constraint firstItem="KPr-5k-Mko" firstAttribute="top" secondItem="GSA-Yc-XAu" secondAttribute="bottom" constant="35" id="V38-T8-FIy"/>
+                            <constraint firstItem="VA7-vU-sFM" firstAttribute="trailing" secondItem="KPr-5k-Mko" secondAttribute="trailing" constant="20" id="c22-2d-asy"/>
+                            <constraint firstItem="GSA-Yc-XAu" firstAttribute="width" secondItem="6sH-e7-Kwm" secondAttribute="width" multiplier="0.57971" id="cxb-CS-Fmg"/>
+                            <constraint firstItem="GSA-Yc-XAu" firstAttribute="centerY" secondItem="6sH-e7-Kwm" secondAttribute="centerY" id="yPK-O8-hLF"/>
+                            <constraint firstItem="GSA-Yc-XAu" firstAttribute="centerX" secondItem="6sH-e7-Kwm" secondAttribute="centerX" id="zGb-J2-0cN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VA7-vU-sFM"/>
+                    </view>
+                    <connections>
+                        <outlet property="duckImage" destination="GSA-Yc-XAu" id="31H-pX-Bf7"/>
+                        <outlet property="slider" destination="KPr-5k-Mko" id="t8g-UU-hBD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FiW-7K-Hk8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-30.434782608695656" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="duck" width="800" height="800"/>
+    </resources>
+</document>
